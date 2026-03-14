@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+   background-color: #111;
+    color:white;
+    text-align: center;
+}
+/*NAVIGATION BAR*/
+nav {
+    background-color: black;
+    padding: 15px;
+
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: hotpink;
+    text-shadow: 0px 0px 8px hotpink;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background-image: url(./assets/images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-overlay {
+    padding: 50px 20px;
+    display: inline-block;
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: hotpink;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+} 
+
+h1 {
+    font-size: 60px;
+    text-shadow: 0 0px 10px hotpink;
+}
+
+#lineup {
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+#lineup h2 {
+    color: hotpink;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 10px hotpink;
+}
+
+.dj-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dj {
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid hotpink;
+    margin-bottom: 10px;
+
+}
+
+#gallery {
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+#gallery h2 {
+    color: cyan;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 10px cyan;
+}
+
+.gallery-grid img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid cyan;
+}
+
+#rsvp {
+    padding: 50px 20px;
+    background-color: #111;
+}
+#rsvp h2 {
+    color: lime;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 10px lime;
+}
+
+#rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#rsvp input, #rsvp select {
+    padding: 12px;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 5px;
+    border: 2px solid lime;
+    background-color: #222;
+    color: white;
+}
+
+#rsvp button {
+    padding: 12px 25px;
+    background-color: lime;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#rsvp button:hover {
+    background-color: #af0;
+}
+
+footer {
+    background-color: #111;
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-top: 2px solid hotpink;
+}
+
+footer p {
+    margin: 5px 0px;
+}
+
+footer.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    filter: brightness(0)invert(1);
+    transition: all 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    filter: drop-shadow(0 0 8px hotpink);
+    transform: scale(1.2);
+}
+@media (max-width:680px) {
+    h1 {
+        font-size: 40px
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dj img, .gallery-grid img {
+        max-width: 150px;
+    }
+    #rsvp input, #rsvp select {
+        width: 90%;
+    }
+    footer .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid hotpink;
+}
+
+.slides .slide {
+    display: none;
+}
+
+.slides .slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: rgna(0, 0, 0, 0.6);
+    color: hotpink;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.2);
+}
+
+button.prev {left: 10px;}
+button.next {right: 10px;}
+
+#drinks {
+    padding: 50px;
+    background-color: #111;
+}
+
+#drinks h4 {
+    color: purple;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 10px purple;
+}
+
+#drinks h2 {
+    color: aqua;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 10px cyan;
+}
+
+.drink.grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.drink {
+    text-align: center;
+    color: white;
+    border: 2px cyan;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+}
+
+.drink img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
